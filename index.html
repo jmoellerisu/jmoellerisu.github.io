@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Slideous</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <meta name="author" content="author" /> 
+    <meta name="date" content="date" /> 
+    <meta name="company" content="company" /> 
+    <meta name="location" content="location" /> 
+    <meta name="autoincrement" content="true" /> 
+    <link rel="stylesheet" type="text/css" href="slideous.css" /> 
+    <script src="slideous.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <!-- statusbar -->
+    <div id="statusbar">
+      <span style="float:right;">
+        <span style="margin-right:4em;font-weight:bold;"><span id="slideidx"></span> of {$slidecount}</span>
+        <button id="homebutton" title="first slide">1</button>
+        <button id="prevslidebutton" title="previous slide">&laquo;</button>
+        <button id="previtembutton" title="previous item">&lsaquo;</button>
+        <button id="nextitembutton" title="next item">&rsaquo;</button>
+        <button id="nextslidebutton" title="next slide">&raquo;</button>
+        <button id="endbutton" title="last slide">{$slidecount}</button>
+        <button id="incfontbutton" title="content">A+</button>
+        <button id="decfontbutton" title="first slide">A-</button>
+        <select id="tocbox" size="1"><option></option></select>
+      </span>
+      <span id="eos">&frac12;</span>
+      <span title="{$location}, {$date}">{$title}, {$author}</span>
+    </div>
+
+    <!-- slides -->
+    <div class="slide">
+      <h1 id="why-machine-learning-ml">Why Machine Learning (ML)</h1>
+      <ul>
+      <li>How computers know how to do things?</li>
+      <li>Two ways:
+      <ol type="1">
+      <li>programming: steps detailed by human programmer</li>
+      <li>learning: without being specifically told</li>
+      </ol></li>
+      <li>Example 1: machine translation
+      <ol type="1">
+      <li>programming: writing many rules to replace and reposition words, e.g., <em>Do you speak Julia?</em> <em>Sprechen Sie Julia?</em><br />
+      </li>
+      <li>learning: feeding the computer many bilingual documents</li>
+      </ol></li>
+      <li>Example 2: sorting
+      <ol type="1">
+      <li>programming: Quicksort, etc.</li>
+      <li>learning: feeding the computer many pairs of unsorted and sorted list of numbers.</li>
+      </ol></li>
+      <li>The first approach in the context of AI is also called rule-based system or expert system, e.g. MyCin, Grammarly.</li>
+      </ul>
+    </div>
+    <div class="slide">
+      <h1 id="warm-up">Warm up</h1>
+      <ul>
+      <li>An object at rest stays at rest and an object in motion stays in motion with the same speed and in the same direction unless acted upon by an unbalanced force. – Newton’s first law of motion</li>
+      <li>E=MC<sup>2</sup></li>
+      <li>O(nlog<sub>n</sub>)</li>
+      </ul>
+    </div>
+    <div class="slide">
+      <h1 id="section"></h1>
+      <ul>
+      <li>Supervised, finding <span class="math inline"><em>f̂</em>(<em>x</em>) ≈ <em>f</em>(<em>x</em>)</span> with ground truth provided by human.
+      <ul>
+      <li>Let <span class="math inline"><em>x</em></span> and <span class="math inline"><em>y</em></span> be two (vectors of) variables, and a function connecting them <span class="math inline"><em>y</em> = <em>f</em>(<em>x</em>)</span> But only god knows <span class="math inline"><em>f</em></span>.</li>
+      <li>We construct another function <span class="math inline"><em>f̂</em></span> to approximate <span class="math inline"><em>f</em></span> such that <span class="math inline"><em>ŷ</em> = <em>f̂</em>(<em>x</em>) ≈ <em>y</em> = <em>f</em>(<em>x</em>)</span> for a(ny) given <span class="math inline"><em>x</em></span>.</li>
+      <li><strong>Supervised</strong> because we provide many pairs of <span class="math inline"><em>x</em></span>’s and <span class="math inline"><em>y</em></span>’s for the computer to know the difference between <span class="math inline"><em>ŷ</em></span> and <span class="math inline"><em>y</em></span> on a large pool of samples.</li>
+      <li>Examples: object detection from images, <a href="http://flavia.sourceforge.net/">Flavia</a>, <a href="https://www.electronicdesign.com/technologies/microprocessors/article/21802106/ai-helps-amds-ryzen-take-on-intel">CPU branch prediction</a>, <a href="https://arxiv.org/abs/2005.06546">COVID-19 diagnosis from blood profile</a>, <a href="https://www.technologyreview.com/2009/04/29/213440/a-neural-net-that-diagnoses-epilepsy/">Epileptic EEG recognition</a>, <a href="https://mfr.osf.io/render?url=https://osf.io/b58jr/?action=download%26mode=render">depression treatment from brain shapes</a>.</li>
+      <li>Beyond categorization/classification: <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004838">Mflux</a>, <a href="https://www.aclweb.org/anthology/P15-2007.pdf">Review helpfulness prediction</a>, <a href="https://www.aclweb.org/anthology/E17-2112.pdf">Document summarization</a>, predict house prices</li>
+      </ul></li>
+      <li>Unsupervised, finding <span class="math inline"><em>f̂</em>(<em>x</em>)</span> without ground truth</li>
+      <li>Reinforcement, let the machine find ground truth itself</li>
+      </ul>
+    </div>
+    <div class="slide">
+      <h1 id="section-1"></h1>
+      <p>The one-hot encoding vector length will be the length of the number of categories examined. Since the length of the vector is the least dimension the vector can exist in, this means the vector will have a dimension of 5.</p>
+    </div>
+    <!-- more slides -->
+  </body>
+</html>
